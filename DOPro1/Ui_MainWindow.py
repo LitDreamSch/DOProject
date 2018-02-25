@@ -1,0 +1,163 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'E:\code\DOPro\DOPro1\MainWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.10
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(220, 239)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+        self.centralWidget = QtWidgets.QWidget(MainWindow)
+        self.centralWidget.setObjectName("centralWidget")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralWidget)
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 221, 240))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
+        self.tabWidget.setSizePolicy(sizePolicy)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab_3 = QtWidgets.QWidget()
+        self.tab_3.setObjectName("tab_3")
+        self.textBrowser = QtWidgets.QTextBrowser(self.tab_3)
+        self.textBrowser.setGeometry(QtCore.QRect(0, 0, 215, 212))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(240, 240, 240, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(240, 240, 240, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(240, 240, 240))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        self.textBrowser.setPalette(palette)
+        self.textBrowser.setObjectName("textBrowser")
+        self.tabWidget.addTab(self.tab_3, "")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.label = QtWidgets.QLabel(self.tab)
+        self.label.setGeometry(QtCore.QRect(158, 5, 41, 16))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.tab)
+        self.label_2.setGeometry(QtCore.QRect(197, 5, 16, 16))
+        self.label_2.setObjectName("label_2")
+        self.groupBox = QtWidgets.QGroupBox(self.tab)
+        self.groupBox.setGeometry(QtCore.QRect(130, 40, 71, 125))
+        self.groupBox.setObjectName("groupBox")
+        self.dial = QtWidgets.QDial(self.groupBox)
+        self.dial.setEnabled(True)
+        self.dial.setGeometry(QtCore.QRect(10, 20, 51, 51))
+        self.dial.setMinimum(1)
+        self.dial.setMaximum(150)
+        self.dial.setProperty("value", 50)
+        self.dial.setObjectName("dial")
+        self.lcdNumber = QtWidgets.QLCDNumber(self.groupBox)
+        self.lcdNumber.setGeometry(QtCore.QRect(10, 85, 51, 21))
+        self.lcdNumber.setProperty("value", 50.0)
+        self.lcdNumber.setObjectName("lcdNumber")
+        self.groupBox_2 = QtWidgets.QGroupBox(self.tab)
+        self.groupBox_2.setGeometry(QtCore.QRect(10, 40, 121, 125))
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.lcdNumber_2 = QtWidgets.QLCDNumber(self.groupBox_2)
+        self.lcdNumber_2.setGeometry(QtCore.QRect(10, 20, 101, 41))
+        self.lcdNumber_2.setObjectName("lcdNumber_2")
+        self.lcdNumber_3 = QtWidgets.QLCDNumber(self.groupBox_2)
+        self.lcdNumber_3.setGeometry(QtCore.QRect(10, 70, 101, 41))
+        self.lcdNumber_3.setObjectName("lcdNumber_3")
+        self.pushButton = QtWidgets.QPushButton(self.tab)
+        self.pushButton.setGeometry(QtCore.QRect(10, 170, 192, 35))
+        self.pushButton.setObjectName("pushButton")
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.groupBox_3 = QtWidgets.QGroupBox(self.tab_2)
+        self.groupBox_3.setGeometry(QtCore.QRect(0, 0, 215, 212))
+        self.groupBox_3.setTitle("")
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.label_4 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_4.setGeometry(QtCore.QRect(1, 24, 211, 31))
+        font = QtGui.QFont()
+        font.setFamily("Envy Code R")
+        self.label_4.setFont(font)
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_5.setGeometry(QtCore.QRect(0, 70, 211, 31))
+        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_6.setGeometry(QtCore.QRect(0, 100, 211, 31))
+        self.label_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_7.setGeometry(QtCore.QRect(0, 130, 211, 31))
+        self.label_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_7.setObjectName("label_7")
+        self.label_8 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_8.setGeometry(QtCore.QRect(100, 190, 111, 20))
+        font = QtGui.QFont()
+        font.setFamily("Envy Code R")
+        font.setPointSize(7)
+        self.label_8.setFont(font)
+        self.label_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_8.setObjectName("label_8")
+        self.tabWidget.addTab(self.tab_2, "")
+        MainWindow.setCentralWidget(self.centralWidget)
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(1)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "DOPro1-反制动的机枪"))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 1.复制待发送内容至剪贴板</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /> 2.打开功能选项卡设置参数</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /> 3.激活输入框</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /> 4.按下LAUNCH开始发送<br />  按下STOP停止发送</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">   *仅可用于windows平台*</p></body></html>"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "使用说明"))
+        self.label.setText(_translate("MainWindow", "状态："))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ff0004;\">●</span></p></body></html>"))
+        self.groupBox.setToolTip(_translate("MainWindow", "个/分钟"))
+        self.groupBox.setTitle(_translate("MainWindow", "速度"))
+        self.groupBox_2.setTitle(_translate("MainWindow", "统计"))
+        self.pushButton.setText(_translate("MainWindow", "LAUNCH"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "功能"))
+        self.label_4.setText(_translate("MainWindow", "Powered by DreamOffice"))
+        self.label_5.setText(_translate("MainWindow", "创意:梦想"))
+        self.label_6.setText(_translate("MainWindow", "程序:梦想"))
+        self.label_7.setText(_translate("MainWindow", "设计:小黑"))
+        self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#818181;\">Version:1.0.0 Beta</span></p></body></html>"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "关于"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
