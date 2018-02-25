@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>DOPro_icon_Round.png</file>
+    <file>waiting.png</file>
+    <file>DO_Logo2.png</file>
+  </qresource>
+</RCC>
