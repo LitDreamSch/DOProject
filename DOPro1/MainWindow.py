@@ -13,7 +13,7 @@ import win32api
 import win32con
 import inspect
 import ctypes
-  
+
 def _async_raise(tid, exctype):
     """raises the exception, performs cleanup if needed"""
     tid = ctypes.c_long(tid)

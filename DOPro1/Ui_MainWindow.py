@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -69,6 +70,11 @@ class Ui_MainWindow(object):
         self.lcdNumber.setGeometry(QtCore.QRect(10, 85, 51, 21))
         self.lcdNumber.setProperty("value", 50.0)
         self.lcdNumber.setObjectName("lcdNumber")
+        self.graphicsView = QtWidgets.QGraphicsView(self.groupBox)
+        self.graphicsView.setGeometry(QtCore.QRect(10, 20, 51, 51))
+        self.graphicsView.setStyleSheet("border-image: url(:/img/c.png);")
+        self.graphicsView.setObjectName("graphicsView")
+        self.graphicsView.setAttribute(Qt.WA_TransparentForMouseEvents, True)
         self.groupBox_2 = QtWidgets.QGroupBox(self.tab)
         self.groupBox_2.setGeometry(QtCore.QRect(10, 40, 121, 125))
         self.groupBox_2.setObjectName("groupBox_2")
@@ -148,9 +154,10 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "创意:梦想"))
         self.label_6.setText(_translate("MainWindow", "程序:梦想"))
         self.label_7.setText(_translate("MainWindow", "设计:小黑"))
-        self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#818181;\">Version:1.0.0 Beta</span></p></body></html>"))
+        self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#818181;\">Version:1.0.1 Beta</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "关于"))
 
+import resource_rc
 
 if __name__ == "__main__":
     import sys
@@ -160,4 +167,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

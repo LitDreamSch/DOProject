@@ -187,6 +187,19 @@ p, li { white-space: pre-wrap; }
         <double>50.000000000000000</double>
        </property>
       </widget>
+      <widget class="QGraphicsView" name="graphicsView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/img/c.png);</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
@@ -347,6 +360,8 @@ p, li { white-space: pre-wrap; }
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
