@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="button">
+    <file>img/btn_c.png</file>
+    <file>img/btn_n.png</file>
+    <file>img/btn_s.png</file>
+  </qresource>
+  <qresource prefix="background">
+    <file>img/background_1.png</file>
+    <file>img/background.png</file>
+  </qresource>
+</RCC>
