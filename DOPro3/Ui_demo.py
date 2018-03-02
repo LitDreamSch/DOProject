@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         font.setFamily("微软雅黑 Light")
         font.setPointSize(11)
         self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("border-image: url(:/button/img/btn_c.png);")
+        self.pushButton.setStyleSheet("")
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralWidget)
         self.pushButton_2.setGeometry(QtCore.QRect(10, 75, 170, 55))
@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         font.setFamily("微软雅黑 Light")
         font.setPointSize(11)
         self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_2.setStyleSheet("")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralWidget)
         self.pushButton_3.setGeometry(QtCore.QRect(10, 130, 170, 55))
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         font.setFamily("微软雅黑 Light")
         font.setPointSize(11)
         self.pushButton_3.setFont(font)
-        self.pushButton_3.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_3.setStyleSheet("")
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.centralWidget)
         self.pushButton_4.setGeometry(QtCore.QRect(10, 185, 170, 55))
@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
         font.setFamily("微软雅黑 Light")
         font.setPointSize(11)
         self.pushButton_4.setFont(font)
-        self.pushButton_4.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_4.setStyleSheet("")
         self.pushButton_4.setObjectName("pushButton_4")
         self.groupBox = QtWidgets.QGroupBox(self.centralWidget)
         self.groupBox.setGeometry(QtCore.QRect(190, 0, 761, 630))
@@ -124,7 +124,7 @@ class Ui_MainWindow(object):
         font.setFamily("微软雅黑 Light")
         font.setPointSize(11)
         self.pushButton_5.setFont(font)
-        self.pushButton_5.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_5.setStyleSheet("")
         self.pushButton_5.setObjectName("pushButton_5")
         MainWindow.setCentralWidget(self.centralWidget)
         self.menuBar = QtWidgets.QMenuBar(MainWindow)
@@ -152,6 +152,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -191,4 +192,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

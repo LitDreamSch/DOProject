@@ -8,4 +8,7 @@
     <file>img/background_1.png</file>
     <file>img/background.png</file>
   </qresource>
+  <qresource prefix="/">
+    <file>style.qss</file>
+  </qresource>
 </RCC>

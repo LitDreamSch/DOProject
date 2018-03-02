@@ -4,17 +4,18 @@
 Module implementing MainWindow.
 """
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot,QFile
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Ui_demo import Ui_MainWindow
+
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
     """
-    SelMainBtn = 1
+    MainBTNSelect = 1
     def __init__(self, parent=None):
         """
         Constructor
@@ -22,74 +23,80 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         @param parent reference to the parent widget
         @type QWidget
         """
+
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
 
-    def ClearMainButton(self):
-        self.pushButton.setStyleSheet("border-image: url(:/button/img/btn_n.png);\n")
-        self.pushButton_2.setStyleSheet("border-image: url(:/button/img/btn_n.png);\n")
-        self.pushButton_3.setStyleSheet("border-image: url(:/button/img/btn_n.png);\n")
-        self.pushButton_4.setStyleSheet("border-image: url(:/button/img/btn_n.png);\n")
-        self.pushButton_5.setStyleSheet("border-image: url(:/button/img/btn_n.png);\n")
+        # QSS
+        with open("style.qss","r") as f:
+            qss = f.read()
+        self.setStyleSheet(qss)
+
+    def ClearMainBtn(self):
+        self.setStyleSheet('''.QPushButton:hover {
+                                  border-image: url(:/button/img/btn_s.png);
+                                }''')
+        self.pushButton.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_2.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_3.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_4.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
+        self.pushButton_5.setStyleSheet("border-image: url(:/button/img/btn_n.png);")
 
     @pyqtSlot()
-    def on_pushButton_pressed(self):
-        self.pushButton.setStyleSheet("border-image: url(:/button/img/btn_c.png);\n")
+    def on_pushButton_clicked(self):# 收件箱
+        """
+        Slot documentation goes here.
+        """
+        print(self.MainBTNSelect)
+        if self.MainBTNSelect != 1:# 更换选项卡到收件箱页面
+            self.MainBTNSelect = 1
+            self.ClearMainBtn()
+            self.pushButton.setStyleSheet("border-image:url(:/button/img/btn_c.png)")
 
     @pyqtSlot()
-    def on_pushButton_released(self):
-        if self.SelMainBtn != 1:# 当焦点不在自己身上的时候
-            self.SelMainBtn = 1
-            self.ClearMainButton()
-        self.pushButton.setStyleSheet("border-image: url(:/button/img/btn_s.png);\n")
+    def on_pushButton_2_clicked(self):# 写邮件
+        """
+        Slot documentation goes here.
+        """
+        print(self.MainBTNSelect)
+        if self.MainBTNSelect != 2:# 更换选项卡到收件箱页面
+            self.MainBTNSelect = 2
+            self.ClearMainBtn()
+            self.pushButton_2.setStyleSheet("border-image:url(:/button/img/btn_c.png)")
 
     @pyqtSlot()
-    def on_pushButton_2_pressed(self):
-        self.pushButton_2.setStyleSheet("border-image: url(:/button/img/btn_c.png);\n")
+    def on_pushButton_3_clicked(self):# 联系人
+        """
+        Slot documentation goes here.
+        """
+        print(self.MainBTNSelect)
+        if self.MainBTNSelect != 3:# 更换选项卡到收件箱页面
+            self.MainBTNSelect = 3
+            self.ClearMainBtn()
+            self.pushButton_3.setStyleSheet("border-image:url(:/button/img/btn_c.png)")
 
     @pyqtSlot()
-    def on_pushButton_2_released(self):
-        if self.SelMainBtn != 2:# 当焦点不在自己身上的时候
-            self.SelMainBtn = 2
-            self.ClearMainButton()
-
-        self.pushButton_2.setStyleSheet("border-image: url(:/button/img/btn_s.png);\n")
-
-    @pyqtSlot()
-    def on_pushButton_3_pressed(self):
-        self.pushButton_3.setStyleSheet("border-image: url(:/button/img/btn_c.png);\n")
-
-    @pyqtSlot()
-    def on_pushButton_3_released(self):
-        if self.SelMainBtn != 3:# 当焦点不在自己身上的时候
-            self.ClearMainButton()
-            self.SelMainBtn = 3
-
-        self.pushButton_3.setStyleSheet("border-image: url(:/button/img/btn_s.png);\n")
+    def on_pushButton_4_clicked(self):# 个人
+        """
+        Slot documentation goes here.
+        """
+        print(self.MainBTNSelect)
+        if self.MainBTNSelect != 4:# 更换选项卡到收件箱页面
+            self.MainBTNSelect = 4
+            self.ClearMainBtn()
+            self.pushButton_4.setStyleSheet("border-image:url(:/button/img/btn_c.png)")
 
     @pyqtSlot()
-    def on_pushButton_4_pressed(self):
-        self.pushButton_4.setStyleSheet("border-image: url(:/button/img/btn_c.png);\n")
+    def on_pushButton_5_clicked(self):# 发件箱
+        """
+        Slot documentation goes here.
+        """
+        print(self.MainBTNSelect)
+        if self.MainBTNSelect != 5:# 更换选项卡到收件箱页面
+            self.MainBTNSelect = 5
+            self.ClearMainBtn()
+            self.pushButton_5.setStyleSheet("border-image:url(:/button/img/btn_c.png)")
 
-    @pyqtSlot()
-    def on_pushButton_4_released(self):
-        if self.SelMainBtn != 4:# 当焦点不在自己身上的时候
-            self.ClearMainButton()
-            self.SelMainBtn = 4
-
-        self.pushButton_4.setStyleSheet("border-image: url(:/button/img/btn_s.png);\n")
-
-    @pyqtSlot()
-    def on_pushButton_5_pressed(self):
-        self.pushButton_5.setStyleSheet("border-image: url(:/button/img/btn_c.png);\n")
-
-    @pyqtSlot()
-    def on_pushButton_5_released(self):
-        if self.SelMainBtn != 5:# 当焦点不在自己身上的时候
-            self.ClearMainButton()
-            self.SelMainBtn = 5
-
-        self.pushButton_5.setStyleSheet("border-image: url(:/button/img/btn_s.png);\n")
 
 
 import resource_rc

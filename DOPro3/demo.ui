@@ -33,7 +33,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/button/img/btn_c.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>收件箱</string>
@@ -55,7 +55,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/button/img/btn_n.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>写邮件</string>
@@ -77,7 +77,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/button/img/btn_n.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>联系人</string>
@@ -99,7 +99,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/button/img/btn_n.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>个人</string>
@@ -360,7 +360,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/button/img/btn_n.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>发件箱</string>
